@@ -1,0 +1,12 @@
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\bin\Debug\net6.0\Northwind.Contract.deps.json
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\bin\Debug\net6.0\Northwind.Contract.dll
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\bin\Debug\net6.0\Northwind.Contract.pdb
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.csproj.AssemblyReference.cache
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.AssemblyInfoInputs.cache
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.AssemblyInfo.cs
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.csproj.CoreCompileInputs.cache
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.dll
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\refint\Northwind.Contract.dll
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\Northwind.Contract.pdb
+C:\bootcamp\Batch20\NorthwindWebSolution\Northwind.Contract\obj\Debug\net6.0\ref\Northwind.Contract.dll
