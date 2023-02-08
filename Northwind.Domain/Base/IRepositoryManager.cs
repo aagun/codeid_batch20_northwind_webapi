@@ -11,5 +11,7 @@ namespace Northwind.Domain.Base
     {
         IRegionRepository RegionRepository { get; }
 
+        IProductRepository ProductRepository { get; }
+
     }
 }
