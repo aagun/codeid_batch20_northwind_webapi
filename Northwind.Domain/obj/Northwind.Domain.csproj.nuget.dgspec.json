@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {}
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {}
   },
   "projects": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
         "projectName": "Northwind.Domain",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

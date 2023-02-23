@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {}
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {}
   },
   "projects": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
         "projectName": "Northwind.Contract",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

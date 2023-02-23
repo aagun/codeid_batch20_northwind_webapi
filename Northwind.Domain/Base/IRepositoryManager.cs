@@ -13,5 +13,7 @@ namespace Northwind.Domain.Base
 
         IProductRepository ProductRepository { get; }
 
+        IProductPhotoRepository ProductPhotoRepository { get; }
+
     }
 }

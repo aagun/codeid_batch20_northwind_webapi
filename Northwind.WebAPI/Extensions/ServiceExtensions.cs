@@ -33,5 +33,12 @@ namespace Northwind.WebAPI.Extensions
         public static void ConfigureDbContext(this IServiceCollection services, IConfiguration configuration) =>
            services.AddSingleton(new AdoDbContext(configuration.GetConnectionString("development")));
 
+        public static void ConfigureUtitlityService(this IServiceCollection services) =>
+            services.AddScoped<IUtilityService, UtilityService>();
+
+        public static void ConfigureServiceManager(this IServiceCollection services) =>
+            services.AddScoped<IServiceManager, ServiceManager>();
+
+
     }
 }

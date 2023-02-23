@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj": {}
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
         "projectName": "Northwind.Contract",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,14 +65,14 @@
         }
       }
     },
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
         "projectName": "Northwind.Domain",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,14 +120,14 @@
         }
       }
     },
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj",
         "projectName": "Northwind.Persistence",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -138,8 +144,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj"
               }
             }
           }
@@ -179,14 +185,14 @@
         }
       }
     },
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj",
         "projectName": "Northwind.Services.Abstraction",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -202,7 +208,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -214,6 +224,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -234,14 +250,14 @@
         }
       }
     },
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj",
         "projectName": "Northwind.Services",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -258,8 +274,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj"
+              },
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj"
               }
             }
           }
@@ -299,14 +318,14 @@
         }
       }
     },
-    "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj": {
+    "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj",
+        "projectUniqueName": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj",
         "projectName": "Northwind.WebAPI",
-        "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj",
+        "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.WebAPI\\Northwind.WebAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.WebAPI\\obj\\",
+        "outputPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -323,20 +342,20 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Contract\\Northwind.Contract.csproj"
               },
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Domain\\Northwind.Domain.csproj"
               },
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Persistence\\Northwind.Persistence.csproj"
               },
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services.Abstraction\\Northwind.Services.Abstraction.csproj"
               },
-              "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj": {
-                "projectPath": "C:\\bootcamp\\Batch20\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj"
+              "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj": {
+                "projectPath": "C:\\bootcamp\\Batch20\\Practise\\NorthwindWebSolution\\Northwind.Services\\Northwind.Services.csproj"
               }
             }
           }
