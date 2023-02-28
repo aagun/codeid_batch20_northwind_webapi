@@ -18,5 +18,7 @@ namespace Northwind.Domain.Base
 
         ISupplierRepository SupplierRepository { get; }
 
+        IUserRepository UserRepository { get; }
+
     }
 }

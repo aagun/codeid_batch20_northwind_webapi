@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Northwind.Contracts.Models;
 using Northwind.Domain.Base;
 using Northwind.Domain.RequestFeatures;
 using Northwind.Services.Abstraction;
+using System.Data;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,7 +30,7 @@ namespace Northwind.WebAPI.Controllers
 
 
         // GET: api/<ProductController>
-        [HttpGet]
+        [HttpGet, Authorize(Roles ="Administrator,Manager")]
         public async Task<IActionResult> GetAsync()
         {
             var products =  await _repositoryManager.ProductRepository.FindAllProductAsync();

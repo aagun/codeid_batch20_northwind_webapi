@@ -1,6 +1,7 @@
 using Northwind.Services.Abstraction;
 using Northwind.Services;
 using Northwind.WebAPI.Extensions;
+using Microsoft.Extensions.FileProviders;
 
 internal class Program
 {
@@ -18,6 +19,11 @@ internal class Program
         builder.Services.ConfigureUtitlityService();
         builder.Services.ConfigureServiceManager();
         builder.Services.ConfigureLoggerService();
+
+        builder.Services.AddAuthentication();
+
+        builder.Services.ConfigureJWT(builder.Configuration);
+        builder.Services.ConfigureAuthenticationManager();
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -38,8 +44,16 @@ internal class Program
 
         // add custome
         app.UseStaticFiles();
+        // set folder resources to static file
+        app.UseStaticFiles(new StaticFileOptions()
+        {
+            FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+            RequestPath = new PathString("/Resources")
+        });
+
         app.UseCors("CorsPolicy");
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllers();

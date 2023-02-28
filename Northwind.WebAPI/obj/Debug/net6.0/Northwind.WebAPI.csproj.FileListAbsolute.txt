@@ -92,3 +92,10 @@ C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
