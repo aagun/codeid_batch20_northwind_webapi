@@ -16,6 +16,8 @@ namespace Northwind.Persistence.Contract
 
         IAsyncEnumerator<T> FindAllAsync<T>(SqlCommandModel model);
 
+        Task<IEnumerable<T>> GetAllAsync<T>(SqlCommandModel model);
+
         void Create(SqlCommandModel model);
 
         void Update(SqlCommandModel model);

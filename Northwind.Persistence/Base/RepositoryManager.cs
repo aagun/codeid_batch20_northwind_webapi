@@ -19,6 +19,8 @@ namespace Northwind.Persistence.Base
 
         private Lazy<IProductPhotoRepository> _productPhotoRepositoryLazy;
 
+        private Lazy<ISupplierRepository> _supplierRepositoryLazy;
+
         //private Lazy<IRegionRepository> _regionRepositoryLazy;
 
         public RepositoryManager(AdoDbContext adoContext)
@@ -26,6 +28,7 @@ namespace Northwind.Persistence.Base
             _adoContext = adoContext;
             //_regionRepositoryLazy = new Lazy<IRegionRepository>(()=> new RegionRepository(adoContext));
             _productPhotoRepositoryLazy = new Lazy<IProductPhotoRepository>(() => new ProductPhotoRepository(adoContext));
+            _supplierRepositoryLazy = new Lazy<ISupplierRepository>(() => new SupplierRepository(adoContext));
         }
 
         //public IRegionRepository RegionRepository => _regionRepositoryLazy.Value;
@@ -55,5 +58,7 @@ namespace Northwind.Persistence.Base
         }
 
         public IProductPhotoRepository ProductPhotoRepository => _productPhotoRepositoryLazy.Value;
+
+        public ISupplierRepository SupplierRepository => _supplierRepositoryLazy.Value;
     }
 }

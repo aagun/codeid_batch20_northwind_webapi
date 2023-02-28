@@ -1,5 +1,6 @@
 ﻿using Northwind.Domain.Entities;
 using Northwind.Domain.Repositories;
+using Northwind.Domain.RequestFeatures;
 using Northwind.Persistence.Base;
 
 using Northwind.Persistence.RepositoryContext;
@@ -104,6 +105,82 @@ namespace Northwind.Persistence.Repositories
             decimal id = _adoContext.ExecuteScalar<decimal>(model);
             _adoContext.Dispose();
             return (int)id;
+        }
+
+        public async Task<PagedList<Product>> GetProductPageList(ProductParameters productParameters)
+        {
+            SqlCommandModel model = new SqlCommandModel()
+            {
+                CommandText = @"SELECT * FROM DBO.Products where UnitsInStock between @minStock and @maxStock 
+                                order by ProductId
+                                OFFSET @pageNo ROWS FETCH NEXT  @pageSize ROWS ONLY",
+                CommandType = CommandType.Text,
+                CommandParameters = new SqlCommandParameterModel[] {
+                    new SqlCommandParameterModel() {
+                            ParameterName = "@pageNo",
+                            DataType = DbType.Int32,
+                            Value = productParameters.PageNumber
+                        },
+                     new SqlCommandParameterModel() {
+                            ParameterName = "@pageSize",
+                            DataType = DbType.Int32,
+                            Value = productParameters.PageSize
+                        },
+                      new SqlCommandParameterModel() {
+                            ParameterName = "@minStock",
+                            DataType = DbType.Int32,
+                            Value = productParameters.MinStock
+                        },
+                       new SqlCommandParameterModel() {
+                            ParameterName = "@maxStock",
+                            DataType = DbType.Int32,
+                            Value = productParameters.MaxStock
+                        }
+                }
+
+            };
+
+            var products = await GetAllAsync<Product>(model);
+            var totalRow = FindAllProduct().Count();
+
+            var productSearch = products.Where(p => p.ProductName.ToLower().Contains(productParameters.SearchTerm.Trim().ToLower()));
+
+            //return new PagedList<Product>(products.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+            return new PagedList<Product>(productSearch.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+        }
+
+        public async Task<IEnumerable<Product>> GetProductPaging(ProductParameters productParameters)
+        {
+            SqlCommandModel model = new SqlCommandModel()
+            {
+                CommandText = @"SELECT * FROM DBO.Products order by ProductId
+                                OFFSET @pageNo ROWS FETCH NEXT  @pageSize ROWS ONLY",
+                CommandType = CommandType.Text,
+                CommandParameters = new SqlCommandParameterModel[] {
+                    new SqlCommandParameterModel() {
+                            ParameterName = "@pageNo",
+                            DataType = DbType.Int32,
+                            Value = productParameters.PageNumber
+                        },
+                     new SqlCommandParameterModel() {
+                            ParameterName = "@pageSize",
+                            DataType = DbType.Int32,
+                            Value = productParameters.PageSize
+                        }
+                }
+
+            };
+
+            IAsyncEnumerator<Product> dataSet = FindAllAsync<Product>(model);
+
+            var item = new List<Product>();
+
+            while (await dataSet.MoveNextAsync())
+            {
+                item.Add(dataSet.Current);
+            }
+
+            return item;
         }
 
         public void Insert(Product product)

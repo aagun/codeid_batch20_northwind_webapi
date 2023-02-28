@@ -1,6 +1,7 @@
 ﻿
 
 using Northwind.Domain.Entities;
+using Northwind.Domain.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace Northwind.Domain.Repositories
         IEnumerable<Product> FindAllProduct();
 
         Task<IEnumerable<Product>> FindAllProductAsync();
+
+        Task<IEnumerable<Product>> GetProductPaging(ProductParameters productParameters);
+
+        Task<PagedList<Product>> GetProductPageList(ProductParameters productParameters);
 
 
         Product FindProductById(int productId);
