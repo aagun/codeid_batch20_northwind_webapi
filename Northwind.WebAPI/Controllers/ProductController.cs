@@ -30,7 +30,8 @@ namespace Northwind.WebAPI.Controllers
 
 
         // GET: api/<ProductController>
-        [HttpGet, Authorize(Roles ="Administrator,Manager")]
+        //[HttpGet, Authorize(Roles ="Administrator,Manager")]
+        [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
             var products =  await _repositoryManager.ProductRepository.FindAllProductAsync();

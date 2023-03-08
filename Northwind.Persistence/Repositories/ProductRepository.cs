@@ -143,10 +143,10 @@ namespace Northwind.Persistence.Repositories
             var products = await GetAllAsync<Product>(model);
             var totalRow = FindAllProduct().Count();
 
-            var productSearch = products.Where(p => p.ProductName.ToLower().Contains(productParameters.SearchTerm.Trim().ToLower()));
+            //var productSearch = products.Where(p => p.ProductName.ToLower().Contains(productParameters.SearchTerm.Trim().ToLower()));
 
-            //return new PagedList<Product>(products.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
-            return new PagedList<Product>(productSearch.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+            return new PagedList<Product>(products.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+            //return new PagedList<Product>(productSearch.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
         }
 
         public async Task<IEnumerable<Product>> GetProductPaging(ProductParameters productParameters)
