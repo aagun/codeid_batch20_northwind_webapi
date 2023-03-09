@@ -2,7 +2,7 @@
 using Northwind.Domain.Repositories;
 using Northwind.Domain.RequestFeatures;
 using Northwind.Persistence.Base;
-
+using Northwind.Persistence.RepositoryExtensions;
 using Northwind.Persistence.RepositoryContext;
 using System;
 using System.Collections;
@@ -30,7 +30,7 @@ namespace Northwind.Persistence.Repositories
         public IEnumerable<Product> FindAllProduct()
         {
             IEnumerator<Product> dataSet = FindAll<Product>("SELECT * FROM dbo.Products");
- 
+
             while (dataSet.MoveNext())
             {
                 var item = dataSet.Current;
@@ -50,15 +50,15 @@ namespace Northwind.Persistence.Repositories
 
             };
 
-            IAsyncEnumerator<Product> dataSet =  FindAllAsync<Product>(model);
+            IAsyncEnumerator<Product> dataSet = FindAllAsync<Product>(model);
 
             var item = new List<Product>();
 
 
-             while (await dataSet.MoveNextAsync())
-              {
+            while (await dataSet.MoveNextAsync())
+            {
                 item.Add(dataSet.Current);
-              }
+            }
 
 
             return item;
@@ -143,10 +143,16 @@ namespace Northwind.Persistence.Repositories
             var products = await GetAllAsync<Product>(model);
             var totalRow = FindAllProduct().Count();
 
-            //var productSearch = products.Where(p => p.ProductName.ToLower().Contains(productParameters.SearchTerm.Trim().ToLower()));
+            /*var productSearch = products.Where(p => p.ProductName
+            .ToLower()
+            .Contains(productParameters.SearchTerm == null ? "" : productParameters.SearchTerm.Trim().ToLower()));*/
 
-            return new PagedList<Product>(products.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
-            //return new PagedList<Product>(productSearch.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+            var productSearch = products.AsQueryable()
+                .SearchProduct(productParameters.SearchTerm)
+                .Sort(productParameters.OrderBy);
+
+            //return new PagedList<Product>(products.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
+            return new PagedList<Product>(productSearch.ToList(), totalRow, productParameters.PageNumber, productParameters.PageSize);
         }
 
         public async Task<IEnumerable<Product>> GetProductPaging(ProductParameters productParameters)
@@ -251,6 +257,6 @@ namespace Northwind.Persistence.Repositories
 
 
 
-      
+
     }
 }

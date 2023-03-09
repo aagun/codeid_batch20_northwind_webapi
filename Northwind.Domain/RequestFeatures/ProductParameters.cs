@@ -14,5 +14,7 @@ namespace Northwind.Domain.RequestFeatures
         public bool ValidateStockRange => MaxStock > MinStock;
 
         public string? SearchTerm { get; set; }
+
+        public string OrderBy { get; set; } = "ProductName";
     }
 }

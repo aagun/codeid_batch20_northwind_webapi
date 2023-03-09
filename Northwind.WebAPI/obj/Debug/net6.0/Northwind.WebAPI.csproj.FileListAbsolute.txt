@@ -99,3 +99,4 @@ C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\bootcamp\Batch20\Practise\NorthwindWebSolution\Northwind.WebAPI\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
