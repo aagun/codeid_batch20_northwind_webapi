@@ -181,8 +181,34 @@ namespace Northwind.WebAPI.Controllers
  
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult UpdateProduct(int id, [FromBody] ProductDto productDto)
         {
+            //1. prevent productDto from null
+            if (productDto == null)
+            {
+                _logger.LogError("productDto object sent from client is null");
+                return BadRequest("productDto object is null");
+            }
+
+            var product = new Product()
+            {
+                ProductID = productDto.ProductID,
+                ProductName = productDto.ProductName,
+                CategoryID = productDto.CategoryID,
+                SupplierID = productDto.SupplierID,
+                QuantityPerUnit = productDto.QuantityPerUnit ?? "",
+                UnitPrice = (decimal)productDto.UnitPrice,
+                UnitsInStock = productDto.UnitsInStock,
+                UnitsOnOrder = productDto.UnitsOnOrder,
+                ReorderLevel = productDto.ReorderLevel,
+                Discontinued = productDto.Discontinued,
+            };
+
+            _repositoryManager.ProductRepository.Edit(product);
+
+            //forward 
+            return CreatedAtRoute("GetProduct", new { id = productDto.ProductID }, productDto);
+
         }
 
         // DELETE api/<ProductController>/5

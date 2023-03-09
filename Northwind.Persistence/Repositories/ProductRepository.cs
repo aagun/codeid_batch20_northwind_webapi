@@ -24,7 +24,76 @@ namespace Northwind.Persistence.Repositories
 
         public void Edit(Product product)
         {
-            throw new NotImplementedException();
+            SqlCommandModel model = new SqlCommandModel()
+            {
+                CommandText = @"UPDATE products 
+                SET ProductName=@ProductName,
+                SupplierID=@SupplierID,
+                CategoryID=@CategoryID,
+                QuantityPerUnit=@QuantityPerUnit,
+                UnitPrice=@UnitPrice,
+                UnitsInStock=@UnitsInStock,
+                UnitsOnOrder=@UnitsOnOrder,
+                ReorderLevel=@ReorderLevel,
+                Discontinued=@Discontinued
+                WHERE productId = @ProductID;",
+                CommandType = CommandType.Text,
+                CommandParameters = new SqlCommandParameterModel[] {
+                     new SqlCommandParameterModel() {
+                        ParameterName = "@ProductID",
+                        DataType = DbType.Int64,
+                        Value = product.ProductID
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@ProductName",
+                        DataType = DbType.String,
+                        Value = product.ProductName
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@SupplierID",
+                        DataType = DbType.Int64,
+                        Value = product.SupplierID
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@CategoryID",
+                        DataType = DbType.Int32,
+                        Value = product.CategoryID
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@QuantityPerUnit",
+                        DataType = DbType.String,
+                        Value = product.QuantityPerUnit
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@UnitPrice",
+                        DataType = DbType.Decimal,
+                        Value = product.UnitPrice
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@UnitsInStock",
+                        DataType = DbType.Int16,
+                        Value = product.UnitsInStock
+                    },
+                    new SqlCommandParameterModel() {
+                        ParameterName = "@UnitsOnOrder",
+                        DataType = DbType.Int16,
+                        Value = product.UnitsOnOrder
+                    },
+                     new SqlCommandParameterModel() {
+                        ParameterName = "@ReorderLevel",
+                        DataType = DbType.Int16,
+                        Value = product.ReorderLevel
+                    },
+                     new SqlCommandParameterModel() {
+                        ParameterName = "@Discontinued",
+                        DataType = DbType.Boolean,
+                        Value = product.Discontinued
+                    }
+                }
+            };
+
+            _adoContext.ExecuteNonQuery(model);
+            _adoContext.Dispose();
         }
 
         public IEnumerable<Product> FindAllProduct()
