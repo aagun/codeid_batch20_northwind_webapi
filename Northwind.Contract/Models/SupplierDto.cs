@@ -13,7 +13,7 @@ namespace Northwind.Contracts.Models
     public class SupplierDto
     {
 
-        //public int SupplierId{ get; set; }
+        public int SupplierId{ get; set; }
 
         [Display(Name = "Supplier Name")]
         [Required]

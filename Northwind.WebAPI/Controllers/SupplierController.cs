@@ -51,6 +51,26 @@ namespace Northwind.WebAPI.Controllers
             return Ok(supplierProduct);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetSupplier()
+        {
+            var suppliers = await _repositoryManager.SupplierRepository.FindAllSupplierAsync();
+
+            var suppliersDto = new List<SupplierDto>();
+            foreach (var supplier in suppliers)
+            {
+                
+                suppliersDto.Add(new SupplierDto
+                {
+                    SupplierId = supplier.SupplierID,
+                    CompanyName = supplier.CompanyName,
+                    Address =supplier.Address
+                });
+            }
+
+            return Ok(suppliersDto);
+        }
+
         // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)

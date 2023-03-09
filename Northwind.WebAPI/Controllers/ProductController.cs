@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Northwind.Contract.Models;
 using Northwind.Contracts.Models;
 using Northwind.Domain.Base;
+using Northwind.Domain.Entities;
 using Northwind.Domain.RequestFeatures;
 using Northwind.Services.Abstraction;
 using System.Data;
@@ -34,8 +36,66 @@ namespace Northwind.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            var products =  await _repositoryManager.ProductRepository.FindAllProductAsync();
+            var products = await _repositoryManager.ProductRepository.FindAllProductAsync();
             return Ok(products);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(ProductCreateDto productCreateDto)
+        {
+
+            if (productCreateDto == null)
+            {
+                _logger.LogError("Product object sent from client is null");
+                return BadRequest("Product object is null");
+            }
+
+            var product = new Product
+            {
+                ProductName = productCreateDto.ProductName,
+                CategoryID = productCreateDto.CategoryId.Value,
+                SupplierID = productCreateDto.SupplierId.Value,
+                QuantityPerUnit = productCreateDto.QuantityPerUnit,
+                UnitPrice = (decimal)productCreateDto.UnitPrice,
+                UnitsInStock = productCreateDto.UnitsInStock,
+                UnitsOnOrder = productCreateDto.UnitsOnOrder,
+                ReorderLevel = productCreateDto.ReorderLevel,
+                Discontinued = productCreateDto.Discontinued,
+            };
+
+
+            //2. insert product to table
+            _repositoryManager.ProductRepository.Insert(product);
+
+            //3. if insert product success then get prorductId
+            var productId = _repositoryManager.ProductRepository.GetIdSequence();
+
+            // send as dto
+            var productDto = new ProductDto
+            {
+                ProductID = productId,
+                ProductName = productCreateDto.ProductName,
+                CategoryID = productCreateDto.CategoryId.Value,
+                SupplierID = productCreateDto.SupplierId.Value,
+                QuantityPerUnit = productCreateDto.QuantityPerUnit ?? "",
+                UnitPrice = (decimal)productCreateDto.UnitPrice,
+                UnitsInStock = productCreateDto.UnitsInStock,
+                UnitsOnOrder = productCreateDto.UnitsOnOrder,
+                ReorderLevel = productCreateDto.ReorderLevel,
+                Discontinued = productCreateDto.Discontinued,
+            };
+
+            //forward 
+            return CreatedAtRoute("GetProduct", new { id = productId }, productDto);
+  
+        }
+
+        [HttpGet("{id}", Name = "GetProduct")]
+        public IActionResult GetProductPaging(int id)
+        {
+            var product =  _repositoryManager.ProductRepository.FindProductById(id);
+            return Ok(product);
         }
 
 
@@ -118,12 +178,7 @@ namespace Northwind.WebAPI.Controllers
             return Ok(products);
         }
 
-        // POST api/<ProductController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
+ 
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
